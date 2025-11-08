@@ -17,4 +17,4 @@ def printFiles(dir):
             else:
                 folder_queu.append(element_to_check)
 
-printFiles(dir = "learning-python")
+printFiles(dir = "D:")
