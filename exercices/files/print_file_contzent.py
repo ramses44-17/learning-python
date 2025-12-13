@@ -1,7 +1,9 @@
 from pathlib import Path
-
 path = Path("pi.txt")
-content = path.read_text().rstrip()
-# print(__file__)
-for line in content.splitlines():
-    print(line)
+try:
+    content = path.read_text().rstrip()
+except FileNotFoundError:
+    print("Le fichier n'est pas trouvé dans le chemin specifié")
+else:
+    for line in content.splitlines():
+        print(line)
